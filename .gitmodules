@@ -6,7 +6,7 @@
 	url = https://github.com/Flexitrade/discovery
 [submodule "common"]
 	path = common
-	url = https://github.com/Flexitrade/persistence
+	url = https://github.com/Flexitrade/common
 [submodule "gateway"]
 	path = gateway
 	url = https://github.com/Flexitrade/gateway
