@@ -1,0 +1,15 @@
+[submodule "config"]
+	path = config
+	url = https://github.com/Flexitrade/config
+[submodule "discovery"]
+	path = discovery
+	url = https://github.com/Flexitrade/discovery
+[submodule "common"]
+	path = common
+	url = https://github.com/Flexitrade/persistence
+[submodule "gateway"]
+	path = gateway
+	url = https://github.com/Flexitrade/gateway
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Flexitrade/frontend
