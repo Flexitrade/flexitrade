@@ -17,17 +17,25 @@
 		<spring-doc-dependencies.version>1.6.14</spring-doc-dependencies.version>
 		<jsonwebtoken.version>0.11.5</jsonwebtoken.version>
 		<postgres.version>42.5.4</postgres.version>
+		<mysql.version>8.0.32</mysql.version>
 		<liquibase.version>3.6.2</liquibase.version>
+		<lombok.version>1.18.26</lombok.version>
 	</properties>
 	<modules>
 		<module>config</module>
 		<module>discovery</module>
 		<module>common</module>
+		<module>usermanagement</module>
 		<module>gateway</module>
 		<module>frontend</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>de.flexitrade</groupId>
+				<artifactId>common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
@@ -48,6 +56,11 @@
 				<version>${spring-cloud-sleuth.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-security</artifactId>
+				<version>${spring-boot-dependencies.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.jsonwebtoken</groupId>
@@ -82,6 +95,7 @@
 				<artifactId>springdoc-openapi-webflux-ui</artifactId>
 				<version>${spring-doc-dependencies.version}</version>
 			</dependency>
+			<!--
 			<dependency>
 				<groupId>org.postgresql</groupId>
 				<artifactId>postgresql</artifactId>
@@ -90,39 +104,20 @@
 			<dependency>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-core</artifactId>
-				<version>${liquibase.version}</version>
+			</dependency>
+			-->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
-					<version>${spring-boot-dependencies.version}</version>
-					<executions>
-						<execution>
-							<id>repackage</id>
-							<goals>
-								<goal>repackage</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<mainClass>${start-class}</mainClass>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-war-plugin</artifactId>
-					<configuration>
-						<failOnMissingWebXml>false</failOnMissingWebXml>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
 	<organization>
 		<name>Flexitrade by Michael Maenz</name>
 		<url>app.flexitra.de</url>

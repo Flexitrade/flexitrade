@@ -13,3 +13,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/Flexitrade/frontend
+[submodule "usermanagement"]
+	path = usermanagement
+	url = https://github.com/Flexitrade/usermanagement
