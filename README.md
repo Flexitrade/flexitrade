@@ -1,2 +1,3 @@
 # flexitrade
-Flexitrade parent project
+Flexitrade parent project  
+![Project structure](./assets/flexitrade.drawio.svg)
