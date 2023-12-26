@@ -4,9 +4,6 @@
 [submodule "discovery"]
 	path = discovery
 	url = https://github.com/Flexitrade/discovery
-[submodule "common"]
-	path = common
-	url = https://github.com/Flexitrade/common
 [submodule "gateway"]
 	path = gateway
 	url = https://github.com/Flexitrade/gateway
@@ -16,3 +13,6 @@
 [submodule "usermanagement"]
 	path = usermanagement
 	url = https://github.com/Flexitrade/usermanagement
+[submodule "authentication"]
+	path = authentication
+	url = https://github.com/Flexitrade/authentication
