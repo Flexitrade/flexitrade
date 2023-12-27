@@ -1,3 +1,3 @@
 # flexitrade
 Flexitrade parent project  
-![Project structure](./assets/flexitrade.drawio.svg)
+![Project structure](https://i.imgur.com/I3eXDKT.png)
